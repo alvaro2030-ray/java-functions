@@ -12,6 +12,7 @@
 function splitFirstAndLastNames(str) {
   return str.split(' ');
 }
+splitFirstAndLastNames('John Smith');
 
 
 /** =========================
@@ -20,10 +21,17 @@ function splitFirstAndLastNames(str) {
  * personAge({ id: 1, name: 'Someone', age: 32}) => 32
  */
 
-const personAge = function(personObject) {
-  return personObject.age;
+var personObject = {
+  name: 'name',
+  age: 32
 }
+const personAge = function(age) {
+this.personObject.age = age;
+console.log(age)
+  return personObject.age;
 
+}
+personAge(personObject.age);
 
 /** =========================
  * The isNameInArray function takes an array and string of name as the arguments.
@@ -31,10 +39,13 @@ const personAge = function(personObject) {
  * isNameInArray(['Jon', 'Michael', 'Andrey'], 'Michael') => true;
  * isNameInArray(['Jon', 'Michael', 'Andrey'], 'James') => false;
  */
-
+var arr =['Jon', 'Michael', 'Andrey'];
 const isNameInArray = function(arr, name) {
+  console.log(arr.includes(name));
   return arr.includes(name);
 }
+isNameInArray(arr, 'Michael');
+isNameInArray(arr, 'James'); 
 
 
 /** =========================
@@ -54,6 +65,7 @@ const logSecondsUpToMax = function(max) {
     }
   }, 1000);
 }
+logSecondsUpToMax(4);
 
 
 
