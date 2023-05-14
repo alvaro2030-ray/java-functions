@@ -9,11 +9,7 @@
  * splitFirstAndLastNames('John Smith') => ['John', 'Smith']
  */
 
-function splitFirstAndLastNames(str) {
-  return str.split(' ');
-}
-splitFirstAndLastNames('John Smith');
-
+const splitFirstAndLastNames = (str) => str.split(' ');
 
 /** =========================
  * The personAge() constant is assigned to a function, that takes an object of person Data as the argument.
@@ -21,32 +17,18 @@ splitFirstAndLastNames('John Smith');
  * personAge({ id: 1, name: 'Someone', age: 32}) => 32
  */
 
-var personObject = {
-  name: 'name',
-  age: 32
-}
-const personAge = function(age) {
-this.personObject.age = age;
-console.log(age)
-  return personObject.age;
 
-}
-personAge(personObject.age);
-
+const personAge = (personObject) => personObject.age;
 /** =========================
  * The isNameInArray function takes an array and string of name as the arguments.
  * The function returns the boolean (true/false) if the name exists in the given array
  * isNameInArray(['Jon', 'Michael', 'Andrey'], 'Michael') => true;
  * isNameInArray(['Jon', 'Michael', 'Andrey'], 'James') => false;
  */
-var arr =['Jon', 'Michael', 'Andrey'];
-const isNameInArray = function(arr, name) {
-  console.log(arr.includes(name));
+const isNameInArray = (arr, name) => {
+ 
   return arr.includes(name);
 }
-isNameInArray(arr, 'Michael');
-isNameInArray(arr, 'James'); 
-
 
 /** =========================
  * The logTimer function takes a number as the arguments.
@@ -55,7 +37,7 @@ isNameInArray(arr, 'James');
  * !!! Hint: There are two functions to refactor !!!
  */
 
-const logSecondsUpToMax = function(max) {
+const logSecondsUpToMax = (max) =>{
   let i = 0;
   const timer = setInterval(function() {
     if (i < max) {
@@ -65,9 +47,6 @@ const logSecondsUpToMax = function(max) {
     }
   }, 1000);
 }
-logSecondsUpToMax(4);
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-4"

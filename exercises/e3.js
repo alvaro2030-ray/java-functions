@@ -15,18 +15,14 @@
  */
 
 // Your code goes here...
-var arr = [1,2,3,4,5];
-function doesArrayIncludeItemsBetweenVals(val1, val2){
+function doesArrayIncludeItemsBetweenVals(arr, val1, val2){
 for(var i =0; i < arr.length; i++){
-  if(i > val1 && i < val2){
-    console.log(i + " it works");
+    if(arr[i] > val1 && arr[i] < val2){
     return true;
-  }else{
-    console.log('one number fail');
-    }
+  }
 }
+return false;
 }
-doesArrayIncludeItemsBetweenVals(4, 6);
 
 /**
  * ====================================================
@@ -44,36 +40,31 @@ doesArrayIncludeItemsBetweenVals(4, 6);
  */
 
 // Your code goes here...
-function getValueWithConditionOne(){
-  if(num1 >= 40 && num2 <= 40){
+function getValueWithConditionOne(num1, num2){
+  if(num1 === 40 && num2 === 40){
     return(num1 + num2);
   }else{
     return((num1 + num2)+(num1 + num2));
   }
 }
-getValueWithConditionOne(40, 40);
-getValueWithConditionOne(20, 30);
 
 const getValueWithConditionTwo = (num1, num2) => {
 
-  if(num1 >= 40 && num2 <= 40){
+  if(num1 === 40 && num2 === 40){
     return(num1 + num2);
   }else{
     return((num1 + num2)+(num1 + num2));
   }
 }
-getValueWithConditionTwo(40, 40);
-getValueWithConditionTwo(20, 30);
 
-const getValueWithConditionThree = function (){
-  if(num1 >= 40 && num2 <= 40){
+const getValueWithConditionThree = function (num1, num2){
+  if(num1 === 40 && num2 === 40){
     return(num1 + num2);
   }else{
     return((num1 + num2)+(num1 + num2));
   }
 }
-getValueWithConditionThree(40, 40);
-getValueWithConditionThree(20, 30);
+
 
 
 
